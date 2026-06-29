@@ -34,7 +34,6 @@ while friendship_request != "Y" and friendship_request != "N":
         time.sleep(0.5)
         print(mc_nickname, "biasa aja sih")
 
-
 print("\033[31mTeks Merah\033[0m")
 print("\033[32mTeks Hijau\033[0m")
 print("\033[33mTeks Kuning\033[0m")
