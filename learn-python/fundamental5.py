@@ -1,3 +1,5 @@
+# numpy merupakan library python yang sering digunakan untuk mengelola array/list etc data mentah sebelum dimasukkan ke dalam algoritma training
+
 import numpy as np
 
 print('---Numpy Here!---')
