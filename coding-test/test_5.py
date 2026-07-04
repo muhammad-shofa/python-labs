@@ -25,17 +25,23 @@ y = df["Status_Lulus"]
 # (TULIS KODEMU DI SINI: Inisialisasi DecisionTreeClassifier dan lakukan .fit(X, y))
 decision_model_ai = DecisionTreeClassifier()
 
-decision_model_ai.fit(X, y)
+# decision_model_ai.fit(X, y)
 
 print("[SUKSES] Model Pohon Keputusan sudah selesai belajar!")
 
 # 3. Prediksi Mahasiswa Baru
 # Mahasiswa Baru A: Belajar 1 jam, Kehadiran 40%
 # Mahasiswa Baru B: Belajar 6 jam, Kehadiran 95%
-mahasiswa_baru = np.array([
-    [1, 40],
-    [6, 95]
-])
+# mahasiswa_baru = np.array([
+#     [1, 40],
+#     [6, 95]
+# ])
+
+# gunkaan DataFrame untuk data yang akan diprediksi dan tambahan columns agar model tahu dan tidak complain terkait data yang tidak ada labelnya (karena ia dilatih dengan data berlabel)
+mahasiswa_baru = pd.DataFrame(
+    [[1, 40], [6, 95]],
+    columns=["Jam_Belajar", "Kehadiran_Persen"]
+)
 
 # (TULIS KODEMU DI SINI: Lakukan prediksi menggunakan .predict() terhadap mahasiswa_baru)
 hasil_prediksi = decision_model_ai.predict(mahasiswa_baru)
